@@ -6,7 +6,6 @@ function handle_request() {
 
     $page = get_page();
 
-    // If request comes from the client side router, then the whole page does not need to be sent
     if(isset($_GET["csr"]) && $_GET["csr"] == 'true') {
         header('Content-type: application/json');
         echo json_encode($page);
@@ -169,6 +168,7 @@ function parse_raw_settings_block($raw_settings_block) {
 class Page {
 
     public $content;
+    public $head_content;
     public $settings;
     private $dir_path;
 
@@ -184,6 +184,14 @@ class Page {
         // If there is a styles.css file, then include the styles in the page
         if(is_file($styles_path)) {
             $this->content = "<style>\n\n" . file_get_contents($styles_path) . "\n</style>\n\n" . $this->content;
+        }
+
+        // Path to possible head.html file
+        $head_path = $this->dir_path . 'head.html';
+
+        // If there is a styles.css file, then include the styles in the page
+        if(is_file($head_path)) {
+            $this->head_content = file_get_contents($head_path);
         }
 
         if($raw_settings_block !== null) {

@@ -1,0 +1,344 @@
+Title: Exeter Application Tracker
+Description: Track your job, internship, and placement applications and never miss a deadline.
+
+================
+
+
+<section class="hero">
+    <canvas id="hero-canvas"></canvas>
+    <div class="hero-content">
+        <h1 class="headline">Track all  your <span id="hero-word" class="text-white">Internship</span><br> applications from one place.</h1>
+
+        <p class="headline-small">Keep on top of your job applications with the <a class="underline" href="https://edward-blewitt.uk/application-tracker">Exeter Application Tracker</a></p>
+
+        <a href="https://edward-blewitt.uk/application-tracker">
+            <button class="hero-btn">Learn more</button>
+        </a>
+    </div>
+</section>
+
+<section>
+    <img src="/resources/images/dashboard.PNG" style="width: 100%;">
+</section>
+
+<section class="text-center flex justify-center">
+    <p style="font-size: 1.5rem; max-width: 80%" class="text-grey">Designed for students who are applying to multiple schemes, the Exeter Application Tracker was designed to help you manage all your applications, deadlines, CVs and Cover Letters.</p>
+</section>
+
+<!-- <h2 class="text-center">Organise your applications by stage</h2>
+<section
+    x-data="{
+        selectedTab: 0,
+        tabs: [
+            [
+                {
+                    section: 'Ideas',
+                    open: true,
+                    applications: [
+                        {
+                            company: 'Accenture',
+                            name: 'Technology Placement',
+                            type: 'P',
+                            deadline: '10-12-2023',
+                            deadlineType: 'F'
+                        },
+                        {
+                            company: 'Accenture',
+                            name: 'Technology Placement',
+                            type: 'P'
+                        },
+                        {
+                            company: 'Accenture',
+                            name: 'Technology Placement',
+                            type: 'P'
+                        },
+                    ]
+                },
+                {
+                    section: 'Applying',
+                    open: true,
+                    applications: [
+                        {
+                            company: 'Accenture',
+                            name: 'Technology Placement',
+                            type: 'P',
+                            deadline: '10-12-2023',
+                            deadlineType: 'F'
+                        }
+                    ]
+                }
+            ],
+            [
+                {
+                    section: 'Applied',
+                    open: true,
+                    applications: [
+                        {
+                            company: 'Accenture',
+                            name: 'Technology Placement',
+                            type: 'P',
+                            deadline: '10-12-2023',
+                            deadlineType: 'F'
+                        },
+                        {
+                            company: 'Accenture',
+                            name: 'Technology Placement',
+                            type: 'P'
+                        },
+                        {
+                            company: 'Accenture',
+                            name: 'Technology Placement',
+                            type: 'P'
+                        },
+                        {
+                            company: 'Accenture',
+                            name: 'Technology Placement',
+                            type: 'P'
+                        },
+                        {
+                            company: 'Accenture',
+                            name: 'Technology Placement',
+                            type: 'P'
+                        },
+                    ]
+                },
+            ],
+            [
+                {
+                    section: 'Accepted',
+                    open: true,
+                    applications: [
+                        {
+                            company: 'Accenture',
+                            name: 'Technology Placement',
+                            type: 'P',
+                            deadline: '10-12-2023',
+                            deadlineType: 'F'
+                        }
+                    ]
+                },
+                {
+                    section: 'Declined',
+                    open: true,
+                    applications: [
+                        {
+                            company: 'Accenture',
+                            name: 'Technology Placement',
+                            type: 'P',
+                            deadline: '10-12-2023',
+                            deadlineType: 'F'
+                        },
+                        {
+                            company: 'Accenture',
+                            name: 'Technology Placement',
+                            type: 'P',
+                            deadline: '10-12-2023',
+                            deadlineType: 'F'
+                        }
+                    ]
+                }
+            ]
+        ],
+        get selectedTabData() {
+            return this.tabs[this.selectedTab]
+        }
+    }"
+>
+    <div class="tracker">
+        <div class="tracker-tabs">
+            <button class="tracker-tab" :class="{ 'selected': selectedTab === 0 }" @click="selectedTab = 0">Idea / Applying (6)</button>
+            <button class="tracker-tab" :class="{ 'selected': selectedTab === 1 }" @click="selectedTab = 1">Applied (12)</button>
+            <button class="tracker-tab" :class="{ 'selected': selectedTab === 2 }" @click="selectedTab = 2">Accepted / Declined (22)</button>
+        </div>
+    <div>
+    
+    <table style="user-select: none;">
+        <thead>
+            <tr>
+                <th width="24%">Company</th>
+                <th>Name</th>
+                <th width="6%">Type</th>
+                <th width="10%">Dln</th>
+                <th width="10%">Dln Type</th>
+            </tr>
+        </thead>
+        <tbody>
+            <template x-for="section in selectedTabData">
+                <tr>
+                    <td class="tracker-row-heading" colspan="100%" @click="section.open = !section.open">
+                        <svg x-show="section.open" stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M21.886 5.536A1.002 1.002 0 0 0 21 5H3a1.002 1.002 0 0 0-.822 1.569l9 13a.998.998 0 0 0 1.644 0l9-13a.998.998 0 0 0 .064-1.033zM12 17.243 4.908 7h14.184L12 17.243z"></path></svg>
+                        <svg x-show="!section.open" stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M3 19h18a1.002 1.002 0 0 0 .823-1.569l-9-13c-.373-.539-1.271-.539-1.645 0l-9 13A.999.999 0 0 0 3 19zm9-12.243L19.092 17H4.908L12 6.757z"></path></svg>
+                        <span style="white-space: nowrap;" x-text="section.section + ' (' + section.applications.length + ')'"></span>
+                    </td>
+                </tr>
+                <template x-if="section.open" x-for="application in section.applications">
+                    <tr>
+                        <td x-text="application?.company"></td>
+                        <td x-text="application?.name"></td>
+                        <td x-text="application?.type"></td>
+                        <td x-text="application?.deadline"></td>
+                        <td x-text="application?.deadlineType"></td>
+                    </tr>
+                </template>
+            </template>
+        </tbody>
+    </table>
+</section> -->
+
+<section class="feature">
+
+    <img src="/resources/images/applications-examples.PNG">
+
+    <div class="feature-info flex flex-col gap-m">
+        <h2 class="feature-title">Track all of your applications</h2>
+        <p class="feature-description">Store the information about each application in one safe place. Group your applications by: idea, applying, applied, accepted and declined.</p>
+        <div>
+            <button class="feature-button">Try it now</button>
+        </div>
+    </div>
+
+</section>
+
+<section class="feature reverse">
+
+    <img src="/resources/images/deadlines.PNG">
+
+    <div class="feature-info flex flex-col gap-m">
+        <h2 class="feature-title">Never miss a deadline</h2>
+        <p class="feature-description">The tracker warns you when deadlines are approaching. You can even sync your personal calendar app with the deadlines.</p>
+        <div>
+            <button class="feature-button">Try it now</button>
+        </div>
+    </div>
+
+</section>
+
+<section class="feature">
+
+    <img src="/resources/images/cv-cover-mobile.PNG">
+
+    <div class="feature-info flex flex-col gap-m">
+        <h2 class="feature-title">Save each version of your CV</h2>
+        <p class="feature-description">After you tailor your CV and write a cover letter for a company, record a copy of what you sent them.</p>
+        <div>
+            <button class="feature-button">Try it now</button>
+        </div>
+    </div>
+
+</section>
+
+<section class="feature reverse">
+
+    <div class="analytics-img">
+        <img src="/resources/images/places.PNG" alt="Image of the places map feature" class="main-img">
+        <img src="/resources/images/graphs.PNG" class="small-img">
+    </div>
+
+    <div class="feature-info flex flex-col gap-m">
+        <h2 class="feature-title">Get insights into your applications</h2>
+        <p class="feature-description">Get a cool useful into the locations you are applying to and get an overview of the the statuses of your applications.</p>
+        <div>
+            <button class="feature-button">Try it now</button>
+        </div>
+    </div>
+
+</section>
+
+
+<h2 class="text-center heading">What people say about us</h2>
+<section class="testimonials">
+    <div class="testimonial">
+        <p class="quote">Thanks to the tracker, I managed to stay on track and eventually got an offer! Can't recommend it enough to fellow students</p>
+        <div class="flex flex-col align-center gap-s">
+            <p class="text-white">Offer received from</p>
+            <img src="/resources/images/ey.png" class="logo">
+        </div>
+        <!-- <h4 class="author">Computer Science, 2nd Year</h4> -->
+    </div>
+    <div class="testimonial">
+        <p class="quote">I used the tracker to stay on top of my 40+ applications and not miss any deadlines.</p>
+        <div class="flex flex-col align-center gap-s">
+            <p class="text-white">Offer received from</p>
+            <img src="/resources/images/jp.png" class="logo">
+        </div>
+        <!-- <h4 class="author">BSC Computer Science, 2nd Year</h4> -->
+    </div>
+    <div class="testimonial">
+        <p class="quote">The Exeter Application Tracker was a total lifesaver during my internship hunt. It helped me keep everything organized. It made the whole process way less stressful, and in the end, I got an offer! Definitely worth using if you're applying for internships.</p>
+        <div class="flex flex-col align-center gap-s">
+            <p class="text-white">Offer received from</p>
+            <img src="/resources/images/capital-one.png" class="logo">
+        </div>
+        <!-- <h4 class="author">BSC Computer Science, 2nd Year</h4> -->
+    </div>
+    <div class="testimonial">
+        <p class="quote">I used the tracker to store all the different versions of my CV that I sent to different companies. It was very useful when it came to the interview stage to know what I sent!</p>
+        <div class="flex flex-col align-center gap-s">
+            <p class="text-white">Offer received from</p>
+            <img src="/resources/images/ibm.svg" class="logo">
+        </div>
+        <!-- <h4 class="author">BSC Computer Science, 2nd Year</h4> -->
+    </div>
+    <div class="testimonial">
+        <p class="quote">Best bit of free software that I know. The cool-looking user interface makes you feel awesome while staying on top of your applications.</p>
+        <div class="flex flex-col align-center gap-s">
+            <p class="text-white">Offer received from</p>
+            <img src="/resources/images/github.svg" class="logo">
+        </div>
+        <!-- <h4 class="author">BSC Computer Science, 2nd Year</h4> -->
+    </div>
+</section>
+
+<section
+    x-data="{
+        email: '',
+        message: '',
+        honey: '',
+        responseMessage: '',
+        responseError: false
+    }"
+    class="flex flex-col gap-m contact"
+>
+    <form
+        x-show="responseMessage === ''"
+        @submit.prevent="$post({ route:'/backend/api/POST-contact-form.php', body: { email, message, honey } })"
+        @post="console.log(await $event.detail.response.text())"
+        class="form flex flex-col gap-m"
+    >
+
+        <h2 class="heading">Contact Us</h2>
+
+        <p class="text-grey">Got an idea for an improvement, or want to get in touch? Please get in touch at <a class="text-orange underline" href="mailto:ed@exeter-tracker.uk">ed@exeter-tracker.uk</a> or fill in the form below.</p>
+        
+        <div class="flex flex-col gap-s">
+            <div>
+                <label>Your email</label>
+            </div>
+            <input type="email" placeholder="you@example.com" x-model="email" required>
+        </div>
+
+        <div class="flex flex-col gap-s">
+            <div>
+                <label>Your Message</label>
+            </div>
+            <textarea placeholder="Type your message here" x-model="message" required></textarea>
+        </div>
+
+        <div class="flex flex-col gap-s" style="display: none;">
+            <div>
+                <label>Your Message</label>
+            </div>
+            <input type="text" x-model="honey"></input>
+        </div>
+
+        <div>
+            <button type="submit">Submit</button>
+        </div>
+
+    </form>
+
+    <!-- <form x-show="responseMessage !== ''" class="form">
+        <p :class="{ 'text-red': responseError }" x-text="responseMessage"></p>
+    </form> -->
+    
+</section>

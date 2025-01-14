@@ -1,0 +1,44 @@
+.hero {
+    height: 70vh;
+    position: relative;
+}
+
+.hero #hero-canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 110vh;
+    z-index: -1;
+}
+
+.hero .hero-content {
+    padding: inherit;
+    /* padding-top: 10%; */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 110%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 2rem;
+    z-index: 2;
+}
+
+.hero .hero-btn {
+    padding: 8px 20px;
+    font-size: 1.5rem;
+    background-color: var(--dark-grey);
+    color: var(--text-white);
+}
+
+.headline {
+    font-size: 4.5rem;
+}
+
+.headline-small {
+    color: grey;
+    font-size: 1.5rem;
+}

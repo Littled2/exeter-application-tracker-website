@@ -40,6 +40,8 @@ class Client_Side_Router {
         history.pushState({ url: window.location.href }, document.title, window.location.href)
 
         window.addEventListener("popstate", event => this.navigate_to_page(event.state.url, true))
+
+        // Cache links on hover
     }
 
     /**
@@ -116,6 +118,18 @@ class Client_Side_Router {
         MAIN_ELEMENT.style.display = "none"
         MAIN_ELEMENT.innerHTML = pageData.content
         MAIN_ELEMENT.style.display = initialDisplay
+
+        // Add head contents
+        if(pageData.head_content) {
+            const HEAD_ELEMENT = document.querySelector("head")
+            const pseudoEls = document.createElement("div")
+            pseudoEls.innerHTML = pageData.head_content
+            Array.from(pseudoEls.children).forEach(child => {
+                child.setAttribute("csr_added", "true")
+                HEAD_ELEMENT.append(child)
+            })
+        }
+
 
         this.apply_page_settings(pageData.settings)
 
