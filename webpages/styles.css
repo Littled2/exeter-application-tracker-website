@@ -227,6 +227,19 @@ section {
     padding: var(--spacing-medium);
 }
 
+.main-link-btn {
+    padding: 16px;
+    border-radius: 6px;
+    background-color: var(--text-orange);
+    color: black;
+    font-size: 1.1rem;
+    font-weight: 600;
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
 @media screen and (max-width: 800px) {
     .headline {
         font-size: 3.5rem;
@@ -245,5 +258,8 @@ section {
     }
     .contact .form {
         padding: var(--spacing-small);
+    }
+    .main-link-btn {
+        width: 90vw;
     }
 }
