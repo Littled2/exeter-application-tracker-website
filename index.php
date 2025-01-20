@@ -115,7 +115,7 @@
         <div class="flex space-between gap-m text-white m-flex-col m-align-center">
             <p>
                 <a href="/" class="flex align-center gap-s">
-                    <img class="icon icon-large" src="/resources/images/logo-no-bg.png" alt="Logo">
+                    <img loading="lazy" class="icon icon-large" src="/resources/images/logo-no-bg.png" alt="Logo">
                     <span>Exeter Application Tracker</span>
                 </a>    
             </p>
