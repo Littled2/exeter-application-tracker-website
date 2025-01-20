@@ -59,3 +59,9 @@ main {
     object-position: center;
     border-radius: 16px;
 }
+
+@media screen and (max-width: 800px) {
+    .headline {
+        font-size: 3.5rem;
+    }
+}
