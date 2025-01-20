@@ -1,5 +1,5 @@
 import { onPageLoad } from "/headless-cms-scripts/client-side-router.js";
-import { Moving_Points } from "/scripts/moving-points.js"
+import { Moving_Points } from "/scripts/moving-points.min.js"
 
 
 onPageLoad('/', () => {

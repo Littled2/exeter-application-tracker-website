@@ -22,7 +22,7 @@
 
     <!-- Import Alpine JS -->
     <!-- Remove this if you don't wish to use Alpine JS across you webpages -->
-    <script defer src="/scripts/alpine-requests.js"></script>
+    <!-- <script defer src="/scripts/alpine-requests.js"></script> -->
 
     <script defer src="/scripts/alpine.js"></script>
     
