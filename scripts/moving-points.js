@@ -31,9 +31,9 @@ export class Moving_Points {
         }
 
 
-        this.MIN_CONNECT_DISTANCE = this.canvas.width > this.canvas.height ? this.canvas.width / 5 : this.canvas.height / 3
+        this.MIN_CONNECT_DISTANCE = this.canvas.width > this.canvas.height ? this.canvas.width / 6 : this.canvas.height / 3
 
-        this.interval = setInterval(() => this.refresh(), 30)
+        this.interval = setInterval(() => this.refresh(), 40)
 
         this.refresh()
 

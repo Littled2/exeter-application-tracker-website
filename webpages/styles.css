@@ -43,15 +43,13 @@ section {
     display: flex;
     justify-content: center;
     flex-direction: column;
-    gap: 2rem;
+    gap: 3rem;
     z-index: 2;
 }
 
 .hero .hero-btn {
-    padding: 8px 20px;
+    padding: 16px 24px;
     font-size: 1.5rem;
-    background-color: var(--dark-grey);
-    color: var(--text-white);
 }
 
 .headline {
@@ -77,7 +75,7 @@ section {
 }
 
 .feature:not(:last-of-type) {
-    border-bottom: 2px solid var(--dark-grey);
+    /* border-bottom: 2px solid var(--dark-grey); */
 }
 
 .feature > img {
@@ -93,6 +91,7 @@ section {
 
 .feature .feature-title {
     font-size: var(--heading-size);
+    color: var(--text-white);
 }
 
 .feature .feature-description {
@@ -103,8 +102,8 @@ section {
 .feature .feature-button {
     font-size: 1.4rem;
     padding: 10px 20px;
-    background-color: var(--dark-grey);
-    color: var(--text-white);
+    /* background-color: var(--dark-grey); */
+    /* color: var(--text-white); */
 }
 
 .analytics-img {
@@ -180,9 +179,11 @@ section {
 }
 
 .testimonial {
-    border: 2px var(--border-colour) solid;
+    box-shadow: rgba(0, 0, 0, 0.25) 1.95px 1.95px 2.6px;
+    border-radius: 8px;
+    background-color: var(--border-colour);
     padding: var(--spacing-medium);
-    color: grey;
+    color: var(--text-white);
     width: 25rem;
     min-width: 25rem;
     display: flex;
@@ -225,6 +226,11 @@ section {
 .contact .form {
     border: 2px solid var(--border-colour);
     padding: var(--spacing-medium);
+    border-radius: 16px;
+}
+
+.contact .form button[type=submit] {
+    padding: 16px 24px;
 }
 
 @media screen and (max-width: 800px) {

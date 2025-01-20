@@ -58,18 +58,32 @@
 </head>
 <body>
 
-    <header>
+    <header x-data="{ menuOpen: false }">
         <a class="header-link" href="/">
-            <img src="/resources/images/Exeter Application Tracker Logo Grey.png" alt="Logo">
+            <img src="/resources/images/logo-no-bg.png" alt="Logo">
             <span>Exeter Application Tracker</span>
         </a>
         
-        <div class="flex align-center gap-m">
-            <a class="header-link" href="/advice"><span class="m-hide">Application </span>Advice</a>    
+        <div class="flex gap-m">
 
-            <a href="https://edward-blewitt.uk/application-tracker" class="m-hide">
-                <button class="sign-in">Sign in</button>
-            </a>
+            <button class="mobile-menu-toggle m-show-flex" x-on:click="menuOpen = !menuOpen" x-bind:class="menuOpen ? 'open' : ''" aria-label="Menu Toggle Button" aria-pressed="false">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </button>
+
+            <div class="header-nav" :class="menuOpen ? 'open' : ''">
+
+                <a class="header-link m-show-flex" href="/" @click="menuOpen = false">Home</a>
+
+                <a class="header-link" href="/about" @click="menuOpen = false">About</a>
+
+                <a class="header-link" href="/advice" @click="menuOpen = false">Advice</a>
+
+                <a href="https://apps.edward-blewitt.uk/backend/api/urls/GET-goto-url.php?id=67870bd57d12e" @click="menuOpen = false">
+                    <button class="sign-in">Sign in</button>
+                </a>
+            </div>
         </div>
     </header>
 
@@ -90,13 +104,20 @@
             </div>
         </div>
 
+        <div class="flex justify-center text-center">
+            <a href="https://github.com/Littled2/exeter-application-tracker" class="flex gap-s align-center text-white">
+                <img src="/resources/images/logos/github-mark-white.png" alt="Github logo" class="icon">
+                <span>Open source project</span>
+            </a>
+        </div>
+
         <div class="flex space-between gap-m text-white m-flex-col m-align-center">
-            <small>
+            <p>
                 <a href="/" class="flex align-center gap-s">
-                    <img class="icon icon-large" src="/resources/images/Exeter Application Tracker Logo Large.png" alt="Logo">
+                    <img class="icon icon-large" src="/resources/images/logo-no-bg.png" alt="Logo">
                     <span>Exeter Application Tracker</span>
                 </a>    
-            </small>
+            </p>
             <div class="flex align-center gap-s">
                 <small>
                     <a href="/terms-of-service">Terms of Service</a>

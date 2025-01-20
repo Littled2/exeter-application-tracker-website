@@ -1,66 +1,31 @@
-title: Blog
+title: Application Advice
 
-==================
+===================
 
-<section
-    x-data="{
-        posts: []
-    }"
-    x-init="$get('/backend/api/blog/GET-blog-posts.php')"
-    @get="posts = await $event.detail.response.json()"
-    class="wrapper"
->
+<section class="flex flex-col gap-l">
 
-    <div class="standout">
-
-        <a class="blog-card" href="/blog/writing-a-good-cv">
-
-            <img src="/resources/images/blog/cv.jpg" class="title-img">
-
-            <h1 class="title">How to Write a CV: A Step-by-Step Guide</h1>
-    
-            <p class="subtitle">Your CV is often your first impression on potential employers. Here's how to make it count.</p>
-    
-            <p class="date">December 23 2024, by <span class="text-orange">Ed Blewitt</span></p>
-        </a>
-
+    <div class="text-center hero-mini">
+        <h1 class="text-white heading">All our advice. In one place</h1>
     </div>
 
 
-    <div class="other">
+    <a href="#" class="important text-grey flex gap-m align-center m-flex-col" target="_blank">
+        <img src="/resources/images/logo-no-bg.png" alt="Exeter Application Tracker Logo">
+        <div class="flex flex-col gap-s">
+            <h3 class="text-white">Find internships to apply to</h3>
+            <p>We regularly post about upcoming deadlines on our instagram</p>
+        </div>
+    </a>
 
-        <template x-for="post in posts">
-            <a class="blog-card" :href="'/blog/post?id=' + post.id">
-                <img :src="post.image" class="title-img">
-    
-                <h1 class="title" x-text="post.title"></h1>
-        
-                <p class="subtitle"x-text="post.description"></p>
-        
-                <p class="date">December 23 2024, by <span class="text-orange">Ed Blewitt</span></p>
-            </a>
-        </template>
-
-        <a class="blog-card" href="/blog/job-search-motivation">
-            <img src="/resources/images/blog/job-search-motivation.jpg" class="title-img">
-
-            <h1 class="title">How to Stay Motivated During Your Job Search</h1>
-    
-            <p class="subtitle">Job hunting can be challenging, but with the right strategies, you can stay focused, positive, and on track to success.</p>
-    
-            <p class="date">December 23 2024, by <span class="text-orange">Ed Blewitt</span></p>
-        </a>
-    
-        <a class="blog-card" href="/blog/track-job-applications">
-            <img src="/resources/images/blog/job-application-tracking.jpg" class="title-img">
-
-            <h1 class="title">How to Track Your Job Applications Effectively</h1>
-    
-            <p class="subtitle">An organized job search is a successful job search. Discover the best practices for tracking your applications.</p>
-    
-            <p class="date">December 23 2024, by <span class="text-orange">Ed Blewitt</span></p>
-        </a>
-
+    <div class="flex flex-col gap-s">
+            <a href="/advice/" class="option">How to find things to apply to</a>
+            <a href="/advice/writing-a-cv" class="option">How to write a killer CV</a>
+            <a href="/advice/" class="option">Writing an amazing cover letter</a>
+            <!-- <a href="/advice/" class="option">Completing online assessments</a> -->
+            <a href="/advice/prepare-for-assessement-centre" class="option">Prepping for an assessment center</a>
+            <a href="/advice/interview-preparation" class="option">Prepare for an interview</a>
     </div>
+
+    <br><br>
 
 </section>

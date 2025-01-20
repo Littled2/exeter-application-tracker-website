@@ -77,3 +77,8 @@ button {
 table th {
     font-weight: inherit;
 }
+
+button {
+    font-size: inherit;
+    font-family: inherit;
+}

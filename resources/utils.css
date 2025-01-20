@@ -27,7 +27,7 @@
 }
 
 .text-grey {
-    color: grey;
+    color: var(--text-grey);
 }
 
 .header-row {
@@ -73,6 +73,10 @@
     gap: var(--spacing-small);
 }
 
+.gap-l {
+    gap: var(--spacing-large);
+}
+
 .justify-center {
     justify-content: center;
 }
@@ -110,6 +114,14 @@
     border: 1px solid var(--light-grey);
     background-color: var(--dark-grey);
     color: var(--text-white);
+}
+
+.button.orange {
+    border-radius: 8px;
+    background-color: var(--text-orange);
+    font-size: 1.1em;
+    border: none;
+    color: var(--bg-colour);
 }
 
 
@@ -150,6 +162,9 @@
     }
     .m-show-block {
         display: block !important;
+    }
+    .m-align-center {
+        align-items: center;
     }
     .button {
         width: unset;
