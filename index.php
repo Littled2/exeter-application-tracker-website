@@ -97,7 +97,7 @@
 
     <footer>
         <div class="ed">
-            <img src="https://edward-blewitt.uk/resources/images/me.jpg" class="ed-image">
+            <img src="https://edward-blewitt.uk/resources/images/me.jpg" class="ed-image" alt="Profile image of Ed Blewitt">
             <div class="ed-desc">
                 <p>
                     Exeter application tracker was developed by <a target="_blank" class="text-orange underline" href="https://edward-blewitt.uk">Ed Blewitt</a> to help students track their applications.
