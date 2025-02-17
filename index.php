@@ -61,8 +61,8 @@
 
     <header x-data="{ menuOpen: false }">
         <a class="header-link" href="/">
-            <img src="/resources/images/logo-no-bg.png" alt="Logo">
-            <span>Exeter Application Tracker</span>
+            <img src="/resources/images/logo-large-no-bg.png" alt="Logo">
+            <!-- <span>Exeter Application Tracker</span> -->
         </a>
         
         <div class="flex gap-m">
@@ -82,7 +82,10 @@
                 <a class="header-link" href="/advice" @click="menuOpen = false">Advice</a>
 
                 <a href="https://apps.edward-blewitt.uk/backend/api/urls/GET-goto-url.php?id=67870bd57d12e" @click="menuOpen = false">
-                    <button class="sign-in">Sign in</button>
+                    <button class="go-to-tracker">
+                        <span>Go to tracker</span>
+                        <img class="icon" src="/resources/images/icons/external.svg" alt="Exterior link icon">
+                    </button>
                 </a>
             </div>
         </div>
@@ -100,7 +103,7 @@
             <img src="https://edward-blewitt.uk/resources/images/me.jpg" class="ed-image" alt="Profile image of Ed Blewitt">
             <div class="ed-desc">
                 <p>
-                    Exeter application tracker was developed by <a target="_blank" class="text-orange underline" href="https://edward-blewitt.uk">Ed Blewitt</a> to help students track their applications.
+                    Designed with ❤ by <a target="_blank" class="text-orange underline" href="https://edward-blewitt.uk">Ed Blewitt</a> to help students.
                 </p>
             </div>
         </div>

@@ -297,6 +297,16 @@ export function onPagesLoad(paths, callback) {
 }
 
 
+/**
+ * Adds an event handler to be run when all paths are loaded
+ * @param {Function} callback The function to be run when a page loads
+ */
+export function onAllPagesLoad(callback) {
+    window.pageLoadEvents["*"].push(callback)
+}
+
+
+
 
 
 
@@ -308,6 +318,10 @@ export function onPagesLoad(paths, callback) {
 window.addEventListener("load", () => {
 
     const path = window.location.pathname
+
+    if(window.pageLoadEvents["*"]) {
+        window.pageLoadEvents["*"]()
+    }
 
     if(!(path in window.pageLoadEvents)) return
 

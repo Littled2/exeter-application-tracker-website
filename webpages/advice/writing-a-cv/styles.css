@@ -6,6 +6,12 @@
     gap: var(--spacing-large);
 }
 
+.text > img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+
 .text h2 {
     font-size: 2.2rem;
     color: var(--text-white);

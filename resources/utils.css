@@ -114,16 +114,26 @@
     border: 1px solid var(--light-grey);
     background-color: var(--dark-grey);
     color: var(--text-white);
+    padding: 10px 20px;
 }
 
 .button.orange {
     border-radius: 8px;
     background-color: var(--text-orange);
-    font-size: 1.1em;
+    font-size: 1.4em;
     border: none;
     color: var(--bg-colour);
 }
 
+.button.orange:hover {
+    transition: 0.15s;
+    background-color: var(--text-orange-darker);
+}
+
+.button:active {
+    color: var(--text-white);
+    transform: scale(0.95);
+}
 
 
 
