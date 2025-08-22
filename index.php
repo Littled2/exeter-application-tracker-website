@@ -115,13 +115,11 @@
             </a>
         </div>
 
-        <div class="flex space-between gap-m text-white m-flex-col m-align-center">
-            <p>
-                <a href="/" class="flex align-center gap-s">
-                    <img loading="lazy" class="icon icon-large" src="/resources/images/logo-no-bg.png" alt="Logo">
-                    <span>Exeter Application Tracker</span>
-                </a>    
-            </p>
+        <div class="flex space-between gap-m text-white m-flex-col align-center">
+            <a href="/" class="flex align-center gap-s">
+                <img src="/resources/images/logo-large-no-bg.png" style="height: 1.85rem;" loading="lazy" alt="Exeter Application Tracker logo">
+            </a>
+
             <div class="flex align-center gap-s">
                 <small>
                     <a href="/terms-of-service">Terms of Service</a>
